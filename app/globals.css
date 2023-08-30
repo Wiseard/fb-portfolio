@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: 'Grandslang_roman';
+  src: url('../public/fonts/grandslang.woff2') format('woff2'),
+    url('../public/fonts/grandslang.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* CSS VARIABLES */
+:root {
+  /* typography */
+  --font-family-text: 'Montserrat', sans-serif;
+  --font-family-grand: 'Grandslang_roman', sans-serif;
+  --letter-spacing: 1px;
+
+  /* colors */
+  --color-dark-grey: #4f5e74;
+  --color-black: #1a1818;
+  --bg-beige: #ece7e1;
+}
+
+/* DEFAULT CSS */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--color-black);
+  font-size: calc(15px + 0.390625vw);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-text);
+}
+
+body h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+  display: block;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}
+
+input,
+select,
+option,
+button {
+  font-family: var(--font-family-text);
+}
+
+/* REUSABLE COMPONENTS */
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/* main component */
+
+body.body-bg-beige {
+  background-color: var(--bg-beige);
+}
+
+body.body-bg-black {
+  background-color: var(--color-black);
+}
+
+/* container component */
+.container {
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+/* content component */
+.content {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+}
+
+/* main component */
+.main-container {
+  grid-template-columns: auto 1fr;
+}
+@media screen and (max-width: 770px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* modal component */
+.modal {
+  background-color: var(--color-black);
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.modal-beige {
+  background-color: var(--bg-beige);
+}
+
+/* input component */
+input[name='user_name'],
+input[name='user_email'],
+input[name='message'] {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid var(--bg-beige);
+  color: var(--bg-beige);
+  font-size: 15px;
+  font-weight: 300;
+  outline: none;
+}
+
+input#name::placeholder,
+input#email::placeholder,
+input#message::placeholder {
+  color: var(--bg-beige);
+}
+
+@media screen and (max-width: 450px) {
+  input[name='user_name'],
+  input[name='user_email'],
+  input[name='message'] {
+    width: 100%;
+  }
+}
+
+/* toast component */
+.toast {
+  background-color: transparent;
+  color: var(--bg-beige);
+}

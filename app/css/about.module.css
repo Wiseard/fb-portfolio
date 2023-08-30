@@ -1,0 +1,98 @@
+.about {
+  background-color: var(--color-black);
+  min-height: 100vh;
+}
+
+.about > * {
+  color: var(--bg-beige);
+}
+
+.aboutGrid {
+  grid-template-columns: 2fr 1.5fr;
+  column-gap: 1.765rem;
+  padding-top: 4rem;
+  padding-left: 5rem;
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+  background-color: var(--color-black);
+}
+
+/* about content */
+
+.content {
+  max-width: 700px;
+}
+
+.content h2 {
+  font-size: 15vw;
+}
+.content h3 {
+  font-size: 2.8rem;
+  margin: 1.765rem 0;
+}
+
+.description p {
+  line-height: 1.7;
+}
+
+.description p:nth-child(2) {
+  margin: 1.765rem 0;
+}
+
+/* about quote */
+
+.quote {
+  justify-self: end;
+  align-self: end;
+  font-family: var(--font-family-grand);
+  text-align: right;
+}
+
+.quote p {
+  font-size: 1.5rem;
+  margin-bottom: 0.765rem;
+}
+
+.quote footer {
+  letter-spacing: 1px;
+}
+
+/* ABOUT RESPONSIVE */
+
+@media screen and (max-width: 1150px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    column-gap: 0rem;
+    row-gap: 2.765rem;
+    padding-left: 2rem;
+  }
+
+  .quote {
+    justify-self: start;
+    align-self: start;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .about {
+    padding: 2rem;
+  }
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    column-gap: 0rem;
+    row-gap: 2.765rem;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .content h3 {
+    font-size: 1.5rem;
+    margin: 1.765rem 0;
+  }
+
+  .quote p {
+    font-size: 1.3rem;
+  }
+}
