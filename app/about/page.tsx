@@ -57,7 +57,7 @@ export default function About() {
               className={myFont.className}
             >{`“What separates design from art is that design is meant to be...
               functional.”`}</p>
-            <footer>—Cameron Moll</footer>
+            <footer className={myFont.className}>—Cameron Moll</footer>
           </blockquote>
         </div>
       </div>

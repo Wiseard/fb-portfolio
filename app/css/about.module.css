@@ -44,7 +44,6 @@
 .quote {
   justify-self: end;
   align-self: end;
-  font-family: var(--font-family-grand);
   text-align: right;
 }
 
