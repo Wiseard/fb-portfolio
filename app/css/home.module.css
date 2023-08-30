@@ -35,7 +35,7 @@
   align-self: end;
 }
 
-.links {
+.links li {
   transform: translate3d(0, 0, 0);
 }
 
